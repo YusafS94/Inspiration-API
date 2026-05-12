@@ -1,0 +1,19 @@
+const express = require('express');
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// This is your DATA PROVIDER (A hardcoded array)
+const quotes = [
+    { id: 1, text: "Code is like humor. When you have to explain it, it’s bad.", author: "Cory House" },
+    { id: 2, text: "Fix the cause, not the symptom.", author: "Steve Maguire" },
+    { id: 3, text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" }
+];
+
+// This is your ENDPOINT
+app.get('/api/quotes', (req, res) => {
+    res.json(quotes); // Sends the data back as JSON
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
