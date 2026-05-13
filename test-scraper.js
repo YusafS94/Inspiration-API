@@ -18,7 +18,7 @@ async function scrapeData() {
         // We target the container for each book
         $('.product_pod').each((index, element) => {
             const title = $(element).find('h3 a').attr('title'); // Extract the 'title' attribute
-            const price = $(element).find('.price_color').text(); // Extract the text inside the price class
+            const price = parseFloat($(element).find('.price_color').text().replace('£', '')); // Extract the text inside the price class and remove the currency symbol
             const url = $(element).find('.image_container img').attr('src'); // Extract the 'src' attribute for the book image URL
             const availability = $(element).find('.product_price .instock.availability').text().trim(); // Extract the availability text
 
