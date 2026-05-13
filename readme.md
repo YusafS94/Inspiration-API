@@ -1,73 +1,39 @@
-# Inspiration API & Books Scraper
+````markdown
+# Inspiration & Scraper API 🚀
 
-A Python project that provides inspirational quotes through an API and scrapes book data from web sources.
+A Node.js backend project that combines a RESTful API with web scraping capabilities. This project is built as a foundation for a "money-making machine" by providing valuable data as a service.
 
-## Features
+## 📍 Live Demo
 
-- **Inspiration API**: Fetch random inspirational quotes with authors
-- **Books Scraper**: Extract book information from web sources
-- **Easy Integration**: Simple API endpoints for quick access to data
-- **Lightweight**: Minimal dependencies for fast execution
+The API is currently hosted on Render:
+[https://inspiration-api.onrender.com/api/quotes](https://inspiration-api.onrender.com/api/quotes)
 
-## Installation
+## 🛠 Tech Stack
 
-1. Clone the repository:
+- **Node.js**: The JavaScript runtime environment.
+- **Express.js**: Fast, unopinionated, minimalist web framework.
+- **Axios**: Promise-based HTTP client for the browser and node.js (used for fetching HTML).
+- **Cheerio**: Fast, flexible & lean implementation of core jQuery designed specifically for the server (used for parsing HTML).
 
-```bash
-git clone <repository-url>
-cd "Inspiration API"
-```
+## ✨ Features
 
-2. Install dependencies:
+- **Quotes API**: A functional GET endpoint that returns a list of inspirational quotes in JSON format.
+- **Web Scraper**: A standalone utility to extract book titles and prices from `books.toscrape.com`.
+- **Ready for Monetization**: Structured to be easily integrated with platforms like RapidAPI.
 
-```bash
-pip install -r requirements.txt
-```
+## 🚀 Getting Started
 
-## Usage
+### Prerequisites
 
-### Running the API
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- npm (Node Package Manager)
 
-```bash
-python app.py
-```
+### Installation
 
-The API will start on `http://localhost:5000` (or your configured port)
-
-### API Endpoints
-
-- `GET /api/quotes` - Retrieve a random inspirational quote
-- `GET /api/quotes/<id>` - Get a specific quote by ID
-- `GET /api/books` - Scrape and retrieve book data
-
-### Example Requests
-
-```bash
-curl http://localhost:5000/api/quotes
-curl http://localhost:5000/api/books
-```
-
-## Project Structure
-
-```
-Inspiration API/
-├── app.py              # Main application file
-├── scraper.py          # Web scraping module
-├── requirements.txt    # Project dependencies
-└── readme.md           # This file
-```
-
-## Technologies Used
-
-- **Python 3.x**
-- **Flask** - Web framework
-- **BeautifulSoup/Requests** - Web scraping
-- **JSON** - Data format
-
-## License
-
-MIT License
-
-## Author
-
-Yusaf
+1. Clone the repository or download the source code.
+2. Open your terminal in the project folder.
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+````
