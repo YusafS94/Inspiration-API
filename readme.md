@@ -1,4 +1,3 @@
-````markdown
 # Inspiration & Scraper API 🚀
 
 A Node.js backend project that combines a RESTful API with web scraping capabilities. This project is built as a foundation for a "money-making machine" by providing valuable data as a service.
@@ -36,4 +35,3 @@ The API is currently hosted on Render:
    ```bash
    npm install
    ```
-````
