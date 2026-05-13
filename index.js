@@ -7,6 +7,7 @@ const quotes = [
     { id: 1, text: "Code is like humor. When you have to explain it, it’s bad.", author: "Cory House" },
     { id: 2, text: "Fix the cause, not the symptom.", author: "Steve Maguire" },
     { id: 3, text: "Simplicity is the soul of efficiency.", author: "Austin Freeman" }
+    { id: 4, text: "Before software can be reusable it first has to be usable.", author: "Ralph Johnson" }
 ];
 
 // This is your ENDPOINT
