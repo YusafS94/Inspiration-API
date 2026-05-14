@@ -40,9 +40,17 @@ async function scrapeData() {
         // 5. SAVE: Write the scraped data to a JSON file
         fs.writeFileSync('bookData.json', JSON.stringify(bookData, null, 2));
 
+        // ADD THIS: Return the data so the API can use it!
+        return bookData;
+
     } catch (error) {
         console.error(`Error scraping: ${error.message}`);
+        return []; // Return an empty array if it fails so the API doesn't crash
     }
 }
 
 scrapeData();
+
+module.exports = scrapeData;
+
+// This code is a web scraper that uses the Axios library to fetch the HTML content of a webpage and the Cheerio library to parse and extract specific data from that HTML. The scraper targets a book store website, extracting the title, price, image URL, and availability of books that are priced under £20. The extracted data is then saved to a JSON file named 'bookData.json'. The scraper also includes error handling to catch and log any issues that may arise during the scraping process.
