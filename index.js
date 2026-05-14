@@ -1,7 +1,7 @@
 require('dotenv').config(); // Load environment variables from .env file
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 const quotesData = require('./quotesData.json'); // Import the quotes data from the JSON file
 const scrapeData = require('./scraper'); // Import the scraping function
 
