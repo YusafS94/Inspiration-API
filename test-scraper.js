@@ -1,5 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
+const fs = require('fs');
 
 const url = 'http://books.toscrape.com/';
 
@@ -22,17 +23,22 @@ async function scrapeData() {
             const url = $(element).find('.image_container img').attr('src'); // Extract the 'src' attribute for the book image URL
             const availability = $(element).find('.product_price .instock.availability').text().trim(); // Extract the availability text
 
-            bookData.push({
-                title: title,
-                price: price,
-                url: url,
-                availability: availability
-            });
+            if (price < 20) { // Filter for books under £20
+                bookData.push({
+                    title: title,
+                    price: price,
+                    url: url,
+                    availability: availability
+                });
+            }
         });
 
         // 4. OUTPUT: Log the final data to your terminal
         console.log("Successfully Scraped Data:");
-        console.table(bookData);
+        // console.table(bookData);
+
+        // 5. SAVE: Write the scraped data to a JSON file
+        fs.writeFileSync('bookData.json', JSON.stringify(bookData, null, 2));
 
     } catch (error) {
         console.error(`Error scraping: ${error.message}`);
