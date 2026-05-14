@@ -33,11 +33,7 @@ async function scrapeData() {
             }
         });
 
-        // 4. OUTPUT: Log the final data to your terminal
-        console.log("Successfully Scraped Data:");
-        // console.table(bookData);
-
-        // 5. SAVE: Write the scraped data to a JSON file
+        // 4. SAVE: Write the scraped data to a JSON file
         fs.writeFileSync('bookData.json', JSON.stringify(bookData, null, 2));
 
         // ADD THIS: Return the data so the API can use it!
