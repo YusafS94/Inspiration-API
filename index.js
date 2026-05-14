@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 const quotesData = require('./quotesData.json'); // Import the quotes data from the JSON file
-const scrapeData = require('./test-scraper'); // Import the scraping function
+const scrapeData = require('./scraper'); // Import the scraping function
 
 // This is your ENDPOINT
 app.get('/api/quotes', (req, res) => {
