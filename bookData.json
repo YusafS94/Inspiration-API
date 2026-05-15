@@ -18,9 +18,33 @@
     "availability": "In stock"
   },
   {
+    "title": "Sharp Objects",
+    "price": 47.82,
+    "url": "media/cache/32/51/3251cf3a3412f53f339e42cac2134093.jpg",
+    "availability": "In stock"
+  },
+  {
     "title": "Sapiens: A Brief History of Humankind",
     "price": 54.23,
     "url": "media/cache/be/a5/bea5697f2534a2f86a3ef27b5a8c12a6.jpg",
+    "availability": "In stock"
+  },
+  {
+    "title": "The Requiem Red",
+    "price": 22.65,
+    "url": "media/cache/68/33/68339b4c9bc034267e1da611ab3b34f8.jpg",
+    "availability": "In stock"
+  },
+  {
+    "title": "The Dirty Little Secrets of Getting Your Dream Job",
+    "price": 33.34,
+    "url": "media/cache/92/27/92274a95b7c251fea59a2b8a78275ab4.jpg",
+    "availability": "In stock"
+  },
+  {
+    "title": "The Boys in the Boat: Nine Americans and Their Epic Quest for Gold at the 1936 Berlin Olympics",
+    "price": 22.6,
+    "url": "media/cache/66/88/66883b91f6804b2323c8369331cb7dd1.jpg",
     "availability": "In stock"
   },
   {
@@ -30,9 +54,21 @@
     "availability": "In stock"
   },
   {
+    "title": "Shakespeare's Sonnets",
+    "price": 20.66,
+    "url": "media/cache/10/48/1048f63d3b5061cd2f424d20b3f9b666.jpg",
+    "availability": "In stock"
+  },
+  {
     "title": "Scott Pilgrim's Precious Little Life (Scott Pilgrim #1)",
     "price": 52.29,
     "url": "media/cache/94/b1/94b1b8b244bce9677c2f29ccc890d4d2.jpg",
+    "availability": "In stock"
+  },
+  {
+    "title": "Rip it Up and Start Again",
+    "price": 35.02,
+    "url": "media/cache/81/c4/81c4a973364e17d01f217e1188253d5e.jpg",
     "availability": "In stock"
   },
   {
@@ -42,9 +78,27 @@
     "availability": "In stock"
   },
   {
+    "title": "Olio",
+    "price": 23.88,
+    "url": "media/cache/55/33/553310a7162dfbc2c6d19a84da0df9e1.jpg",
+    "availability": "In stock"
+  },
+  {
+    "title": "Mesaerion: The Best Science Fiction Stories 1800-1849",
+    "price": 37.59,
+    "url": "media/cache/09/a3/09a3aef48557576e1a85ba7efea8ecb7.jpg",
+    "availability": "In stock"
+  },
+  {
     "title": "Libertarianism for Beginners",
     "price": 51.33,
     "url": "media/cache/0b/bc/0bbcd0a6f4bcd81ccb1049a52736406e.jpg",
+    "availability": "In stock"
+  },
+  {
+    "title": "It's Only the Himalayas",
+    "price": 45.17,
+    "url": "media/cache/27/a5/27a53d0bb95bdd88288eaf66c9230d7e.jpg",
     "availability": "In stock"
   }
 ]

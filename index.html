@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inspiration & Books API | Wakefield Web Development</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;500&family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">Wakefield Web Dev</div>
+        <div class="links">
+          <a href="#endpoints">Endpoints</a>
+          <a href="#docs">Docs</a>
+          <a href="https://github.com" class="btn-github">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Turn Code into <span class="highlight">Leverage</span>.</h1>
+        <p>
+          A lightweight, high-performance API serving inspirational quotes and
+          real-time book market data.
+        </p>
+        <div class="hero-btns">
+          <a
+            href="https://inspiration-api.onrender.com/api/quotes"
+            class="btn-primary"
+            >Try Live API</a
+          >
+          <a href="#docs" class="btn-secondary">View Documentation</a>
+        </div>
+      </section>
+
+      <section id="endpoints" class="grid">
+        <div class="card">
+          <h3>/api/quotes</h3>
+          <p>
+            Fetch curated inspirational quotes to fuel your next project or
+            dashboard.
+          </p>
+          <code>GET /api/quotes</code>
+        </div>
+        <div class="card">
+          <h3>/api/books</h3>
+          <p>
+            Dynamic web scraping engine extracting live data from the book
+            market.
+          </p>
+          <code>GET /api/books?price=20</code>
+        </div>
+      </section>
+
+      <section id="docs" class="code-preview">
+        <h2>Quick Start</h2>
+        <div class="terminal">
+          <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <pre>
+<code>// Fetching your data
+fetch('https://inspiration-api.onrender.com/api/books?price=15')
+  .then(res => res.json())
+  .then(data => console.log(data));</code>
+                </pre>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Wakefield Web Development. Built by Yusaf Saddiq.</p>
+    </footer>
+  </body>
+</html>

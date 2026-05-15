@@ -1,6 +1,6 @@
 const axios = require('axios');
 const cheerio = require('cheerio');
-const fs = require('fs');
+
 
 const url = 'http://books.toscrape.com/';
 
@@ -32,8 +32,7 @@ async function scrapeData() {
 
         });
 
-        // 4. SAVE: Write the scraped data to a JSON file
-        fs.writeFileSync('bookData.json', JSON.stringify(bookData, null, 2));
+
 
         // ADD THIS: Return the data so the API can use it!
         return bookData;
