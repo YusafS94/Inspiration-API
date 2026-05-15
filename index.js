@@ -1,7 +1,7 @@
 require('dotenv').config(); // Load environment variables from .env file
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3000; // Use the PORT from environment variables or default to 3000
 const quotesData = require('./quotesData.json'); // Import the quotes data from the JSON file
 const scrapeData = require('./scraper'); // Import the scraping function
 const fs = require('fs');
@@ -90,18 +90,18 @@ app.get('/api/books/over50', async (req, res) => {
     }
 });
 
-// app.get(`/api/books?price=${price}`, async (req, res) => {
-//     try {
-//         const price = parseFloat(req.query.price); // Get the price from the query parameters and convert it to a number
-//         const filteredBooks = (await scrapeData()).filter(book => book.price < price); // Ensure the scraper runs to update the bookData.json file
-//         res.json(filteredBooks); // Sends the filtered book data back as JSON
-//         writeToFile(filteredBooks); // Save the filtered book data to a JSON file
-//     } catch (error) {
-//         console.error(`Error fetching book data: ${error.message}`);
-//         res.status(500).json({ error: 'Failed to fetch book data' });
-//     }
-// })
-
+app.get('/api/quotes/:category', (req, res) => {
+    // 1. Extract the category from the URL parameters
+    const category = req.params.category.toLowerCase();
+    const results = quotesData[category];
+    // 2. Check if the category exists in the quotes data
+    if (results) {
+        res.json(results); // 3. If it exists, send the quotes back as JSON
+    } else {
+        res.status(404).json({ error: 'Category not found' }); // 4. If it doesn't exist, send a 404 error
+    }
+});
+// Start the server and listen on the specified port
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

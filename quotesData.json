@@ -1,27 +1,260 @@
-[
-    {
-        "id": 1,
-        "text": "Code is like humor. When you have to explain it, it's bad.",
-        "author": "Cory House"
-    },
-    {
-        "id": 2,
-        "text": "Fix the cause, not the symptom.",
-        "author": "Steve Maguire"
-    },
-    {
-        "id": 3,
-        "text": "Simplicity is the soul of efficiency.",
-        "author": "Austin Freeman"
-    },
-    {
-        "id": 4,
-        "text": "Before software can be reusable it first has to be usable.",
-        "author": "Ralph Johnson"
-    },
-    {
-        "id": 5,
-        "text": "Make it work, make it right, make it fast.",
-        "author": "Kent Beck"
-    }
-]
+{
+    "programming": [
+        {
+            "id": 1,
+            "text": "First, solve the problem. Then, write the code.",
+            "author": "John Johnson"
+        },
+        {
+            "id": 2,
+            "text": "Code is like humor. When you have to explain it, it’s bad.",
+            "author": "Cory House"
+        },
+        {
+            "id": 3,
+            "text": "The best error message is the one that never shows up.",
+            "author": "Thomas Fuchs"
+        },
+        {
+            "id": 4,
+            "text": "Experience is the name everyone gives to their mistakes.",
+            "author": "Oscar Wilde"
+        },
+        {
+            "id": 5,
+            "text": "Simplicity is the soul of efficiency.",
+            "author": "Austin Freeman"
+        },
+        {
+            "id": 6,
+            "text": "Talk is cheap. Show me the code.",
+            "author": "Linus Torvalds"
+        },
+        {
+            "id": 7,
+            "text": "Clean code always looks like it was written by someone who cares.",
+            "author": "Michael Feathers"
+        },
+        {
+            "id": 8,
+            "text": "Software is a great combination between artistry and engineering.",
+            "author": "Bill Gates"
+        },
+        {
+            "id": 9,
+            "text": "Before software can be reusable it first has to be usable.",
+            "author": "Ralph Johnson"
+        },
+        {
+            "id": 10,
+            "text": "Fix the cause, not the symptom.",
+            "author": "Steve Maguire"
+        },
+        {
+            "id": 11,
+            "text": "Testing leads to failure, and failure leads to understanding.",
+            "author": "Burt Rutan"
+        },
+        {
+            "id": 12,
+            "text": "The computer was born to solve problems that did not exist before.",
+            "author": "Bill Gates"
+        },
+        {
+            "id": 13,
+            "text": "Every great developer you know got there by solving problems they were unqualified to solve.",
+            "author": "Patrick McKenzie"
+        },
+        {
+            "id": 14,
+            "text": "Programming is the art of telling another human what one wants the computer to do.",
+            "author": "Donald Knuth"
+        },
+        {
+            "id": 15,
+            "text": "A language that doesn't affect the way you think about programming is not worth knowing.",
+            "author": "Alan Perlis"
+        }
+    ],
+    "focus": [
+        {
+            "id": 16,
+            "text": "Done is better than perfect.",
+            "author": "Sheryl Sandberg"
+        },
+        {
+            "id": 17,
+            "text": "Focus is a matter of deciding what things you are not going to do.",
+            "author": "John Carmack"
+        },
+        {
+            "id": 18,
+            "text": "You don't have to see the whole staircase, just take the first step.",
+            "author": "MLK Jr."
+        },
+        {
+            "id": 19,
+            "text": "Amateurs wait for inspiration. The rest of us just get up and go to work.",
+            "author": "Chuck Close"
+        },
+        {
+            "id": 20,
+            "text": "The secret of getting ahead is getting started.",
+            "author": "Mark Twain"
+        },
+        {
+            "id": 21,
+            "text": "Direction is more important than speed. Many are going nowhere fast.",
+            "author": "Unknown"
+        },
+        {
+            "id": 22,
+            "text": "One day or Day One. You decide.",
+            "author": "Unknown"
+        },
+        {
+            "id": 23,
+            "text": "Don't judge each day by the harvest you reap but by the seeds that you plant.",
+            "author": "Robert Louis Stevenson"
+        },
+        {
+            "id": 24,
+            "text": "Concentrate all your thoughts upon the work at hand. The sun's rays do not burn until brought to a focus.",
+            "author": "Alexander Graham Bell"
+        },
+        {
+            "id": 25,
+            "text": "Systems are the guardrails of the mind.",
+            "author": "Unknown"
+        },
+        {
+            "id": 26,
+            "text": "Pace yourself. Your career is a marathon, not a sprint.",
+            "author": "Unknown"
+        },
+        {
+            "id": 27,
+            "text": "It is not the mountain we conquer, but ourselves.",
+            "author": "Sir Edmund Hillary"
+        },
+        {
+            "id": 28,
+            "text": "Small acts, when multiplied by millions of people, can transform the world.",
+            "author": "Howard Zinn"
+        },
+        {
+            "id": 29,
+            "text": "The best way to get something done is to begin.",
+            "author": "Unknown"
+        },
+        {
+            "id": 30,
+            "text": "If you want to be happy, set a goal that commands your thoughts and liberates your energy.",
+            "author": "Andrew Carnegie"
+        }
+    ],
+    "mindset": [
+        {
+            "id": 31,
+            "text": "Imposter syndrome is a sign that you are challenging yourself.",
+            "author": "Unknown"
+        },
+        {
+            "id": 32,
+            "text": "The expert in anything was once a beginner.",
+            "author": "Helen Hayes"
+        },
+        {
+            "id": 33,
+            "text": "Everything you know was once something you didn't.",
+            "author": "Unknown"
+        },
+        {
+            "id": 34,
+            "text": "Don't compare your Chapter 1 to someone else's Chapter 20.",
+            "author": "Unknown"
+        },
+        {
+            "id": 35,
+            "text": "You are allowed to be both a masterpiece and a work in progress, simultaneously.",
+            "author": "Unknown"
+        },
+        {
+            "id": 36,
+            "text": "The only person you should try to be better than is the person you were yesterday.",
+            "author": "Unknown"
+        },
+        {
+            "id": 37,
+            "text": "Confidence is not 'they will like me.' Confidence is 'I’ll be fine if they don't.'",
+            "author": "Unknown"
+        },
+        {
+            "id": 38,
+            "text": "Your value is not defined by your productivity.",
+            "author": "Unknown"
+        },
+        {
+            "id": 39,
+            "text": "Being the smartest person in the room just means you're in the wrong room.",
+            "author": "Unknown"
+        },
+        {
+            "id": 40,
+            "text": "Success is stumbling from failure to failure with no loss of enthusiasm.",
+            "author": "Winston Churchill"
+        },
+        {
+            "id": 41,
+            "text": "What would you do if you weren't afraid?",
+            "author": "Sheryl Sandberg"
+        },
+        {
+            "id": 42,
+            "text": "The question isn't who is going to let me; it's who is going to stop me.",
+            "author": "Ayn Rand"
+        },
+        {
+            "id": 43,
+            "text": "You miss 100% of the shots you don't take.",
+            "author": "Wayne Gretzky"
+        },
+        {
+            "id": 44,
+            "text": "Do what you can, with what you have, where you are.",
+            "author": "Theodore Roosevelt"
+        },
+        {
+            "id": 45,
+            "text": "Everything is figureoutable.",
+            "author": "Marie Forleo"
+        }
+    ],
+    "career": [
+        {
+            "id": 46,
+            "text": "Ship often. The world rewards those who finish.",
+            "author": "Unknown"
+        },
+        {
+            "id": 47,
+            "text": "Leverage is the difference between working hard and working smart.",
+            "author": "Unknown"
+        },
+        {
+            "id": 48,
+            "text": "The best way to predict the future is to create it.",
+            "author": "Peter Drucker"
+        },
+        {
+            "id": 49,
+            "text": "Creativity is intelligence having fun.",
+            "author": "Albert Einstein"
+        },
+        {
+            "id": 50,
+            "text": "Build things because you love them, not because the market told you to.",
+            "author": "Unknown"
+        }
+    ]
+}

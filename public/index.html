@@ -18,7 +18,6 @@
         <div class="logo">Wakefield Web Dev</div>
         <div class="links">
           <a href="#endpoints">Endpoints</a>
-          <a href="#docs">Docs</a>
           <a href="https://github.com" class="btn-github">GitHub</a>
         </div>
       </nav>
@@ -28,40 +27,61 @@
       <section class="hero">
         <h1>Turn Code into <span class="highlight">Leverage</span>.</h1>
         <p>
-          A lightweight, high-performance API serving inspirational quotes and
+          A high-performance API serving curated wisdom for developers and
           real-time book market data.
         </p>
-        <div class="hero-btns">
-          <a
-            href="https://inspiration-api.onrender.com/api/quotes"
-            class="btn-primary"
-            >Try Live API</a
-          >
-          <a href="#docs" class="btn-secondary">View Documentation</a>
-        </div>
       </section>
 
       <section id="endpoints" class="grid">
+        <!-- Books Card -->
         <div class="card">
-          <h3>/api/quotes</h3>
+          <div class="card-header">
+            <h3>Book Scraper</h3>
+            <button class="copy-btn" onclick="copyCode('book-url', event)">
+              Copy URL
+            </button>
+          </div>
           <p>
-            Fetch curated inspirational quotes to fuel your next project or
-            dashboard.
+            Scrape real-time prices. Use the
+            <code class="inline">price</code> query to set your maximum budget.
           </p>
-          <code>GET /api/quotes</code>
+          <code id="book-url">/api/books?price=20</code>
         </div>
+
+        <!-- Quotes Card -->
         <div class="card">
-          <h3>/api/books</h3>
+          <div class="card-header">
+            <h3>Quotes (All)</h3>
+            <button class="copy-btn" onclick="copyCode('quote-all', event)">
+              Copy URL
+            </button>
+          </div>
           <p>
-            Dynamic web scraping engine extracting live data from the book
-            market.
+            Access the full library of 50+ quotes for developers and ADHD focus.
           </p>
-          <code>GET /api/books?price=20</code>
+          <code id="quote-all">/api/quotes</code>
+        </div>
+
+        <!-- Category Card -->
+        <div class="card">
+          <div class="card-header">
+            <h3>Quotes by Category</h3>
+            <button class="copy-btn" onclick="copyCode('quote-cat', event)">
+              Copy URL
+            </button>
+          </div>
+          <p>
+            Filter by category: <code class="inline">programming</code>,
+            <code class="inline">focus</code>,
+            <code class="inline">mindset</code>, or
+            <code class="inline">career</code>.
+          </p>
+          <code id="quote-cat">/api/quotes/programming</code>
         </div>
       </section>
 
       <section id="docs" class="code-preview">
-        <h2>Quick Start</h2>
+        <h2>Example Implementation</h2>
         <div class="terminal">
           <div class="terminal-header">
             <span class="dot red"></span>
@@ -69,8 +89,8 @@
             <span class="dot green"></span>
           </div>
           <pre>
-<code>// Fetching your data
-fetch('https://inspiration-api.onrender.com/api/books?price=15')
+<code>// Get high-focus advice
+fetch('/api/quotes/focus')
   .then(res => res.json())
   .then(data => console.log(data));</code>
                 </pre>
@@ -81,5 +101,27 @@ fetch('https://inspiration-api.onrender.com/api/books?price=15')
     <footer>
       <p>&copy; 2026 Wakefield Web Development. Built by Yusaf Saddiq.</p>
     </footer>
+
+    <script>
+      function copyCode(id, event) {
+        const text = document.getElementById(id).innerText;
+        // Add your domain if deploying to Render, e.g., 'https://my-api.com' + text
+        const fullUrl = window.location.origin + text;
+
+        navigator.clipboard.writeText(fullUrl).then(() => {
+          const btn = event.target;
+          const originalText = btn.innerText;
+          btn.innerText = "Copied!";
+          btn.style.background = "var(--highlight)";
+          btn.style.color = "#000";
+
+          setTimeout(() => {
+            btn.innerText = originalText;
+            btn.style.background = "transparent";
+            btn.style.color = "var(--highlight)";
+          }, 2000);
+        });
+      }
+    </script>
   </body>
 </html>
