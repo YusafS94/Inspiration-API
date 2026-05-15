@@ -22,29 +22,49 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html')); // Serve the index.html file
 });
 
-// This is your ENDPOINT
+// Hard coded Quotes endpoint
 app.get('/api/quotes', (req, res) => {
     res.json(quotesData); // Sends the data back as JSON
 });
 
+// Books endpoint that uses the scraper to get book data and filter it based on price
 app.get('/api/books', async (req, res) => {
     // Here you would typically fetch book data from a database or another source
     try {
-        const bookData = await scrapeData(); // Wait for the scraper to finish and get the book data
-        res.json(bookData); // Sends the returned book data array back as JSON
-        writeToFile(bookData); // Save the book data to a JSON file
+        // 1. Get the price limit from the query parameters and convert it to a number
+        const priceLimit = parseFloat(req.query.price);
+
+        // 2. Wait for the scraper to finish and get the book data
+        const bookData = await scrapeData();
+
+        // 3. Filter the book data based on the price limit
+        const filteredBooks = bookData.filter(book => book.price < priceLimit);
+
+        // 4. Sends the filtered book data array back as JSON
+        res.json(filteredBooks);
+
+        // 5. Save the filtered book data to a JSON file
+        writeToFile(filteredBooks);
     } catch (error) {
         console.error(`Error fetching book data: ${error.message}`);
         res.status(500).json({ error: 'Failed to fetch book data' });
     }
 });
 
+// Additional endpoints for books over specific price points
 app.get('/api/books/over20', async (req, res) => {
     try {
-        const filteredBooks = (await scrapeData()).filter(book => book.price > 20); // Ensure the scraper runs to update the bookData.json file
-        // Here you would typically filter the book data to only include books over £20
-        res.json(filteredBooks); // Sends the filtered book data back as JSON
-        writeToFile(filteredBooks); // Save the filtered book data to a JSON file
+        // 1. Get the book data from the scraper
+        const bookData = await scrapeData();
+
+        // 2. Filter the book data to only include books over £20
+        const filteredBooks = bookData.filter(book => book.price > 20);
+
+        // 3. Sends the filtered book data back as JSON
+        res.json(filteredBooks);
+
+        // 4. Save the filtered book data to a JSON file
+        writeToFile(filteredBooks);
     } catch (error) {
         console.error(`Error fetching book data: ${error.message}`);
         res.status(500).json({ error: 'Failed to fetch book data' });
@@ -53,10 +73,17 @@ app.get('/api/books/over20', async (req, res) => {
 
 app.get('/api/books/over50', async (req, res) => {
     try {
-        const filteredBooks = (await scrapeData()).filter(book => book.price > 50); // Ensure the scraper runs to update the bookData.json file
-        // Here you would typically filter the book data to only include books over £50
-        res.json(filteredBooks); // Sends the filtered book data back as JSON
-        writeToFile(filteredBooks); // Save the filtered book data to a JSON file
+        // 1. Get the book data from the scraper
+        const bookData = await scrapeData();
+
+        // 2. Filter the book data to only include books over £50
+        const filteredBooks = bookData.filter(book => book.price > 50);
+
+        // 3. Sends the filtered book data back as JSON
+        res.json(filteredBooks);
+
+        // 4. Save the filtered book data to a JSON file
+        writeToFile(filteredBooks);
     } catch (error) {
         console.error(`Error fetching book data: ${error.message}`);
         res.status(500).json({ error: 'Failed to fetch book data' });
