@@ -19,6 +19,9 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
   line-height: 1.6;
+  background-image: radial-gradient(rgba(36, 36, 36, 0.5) 1px, transparent 1px);
+  /* Subtle grid pattern with 1px dots and transparent gaps with 1px spacing */
+  background-size: 20px 20px;
 }
 
 /* Navigation */
@@ -181,6 +184,7 @@ footer {
   padding: 4rem;
   border-top: 1px solid var(--border);
   font-size: 0.8rem;
+  background-color: var(--bg);
 }
 
 /* Mobile Responsive Adjustments */
