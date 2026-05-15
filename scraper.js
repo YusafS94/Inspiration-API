@@ -23,14 +23,13 @@ async function scrapeData() {
             const url = $(element).find('.image_container img').attr('src'); // Extract the 'src' attribute for the book image URL
             const availability = $(element).find('.product_price .instock.availability').text().trim(); // Extract the availability text
 
-            if (price < 20) { // Filter for books under £20
-                bookData.push({
-                    title: title,
-                    price: price,
-                    url: url,
-                    availability: availability
-                });
-            }
+            bookData.push({
+                title: title,
+                price: price,
+                url: url,
+                availability: availability
+            });
+
         });
 
         // 4. SAVE: Write the scraped data to a JSON file

@@ -21,6 +21,27 @@ app.get('/api/books', async (req, res) => {
     }
 });
 
+app.get('/api/books/over20', async (req, res) => {
+    try {
+        const filteredBooks = (await scrapeData()).filter(book => book.price > 20); // Ensure the scraper runs to update the bookData.json file
+        // Here you would typically filter the book data to only include books over £20
+        res.json(filteredBooks); // Sends the filtered book data back as JSON
+    } catch (error) {
+        console.error(`Error fetching book data: ${error.message}`);
+        res.status(500).json({ error: 'Failed to fetch book data' });
+    }
+});
+
+app.get('/api/books/over50', async (req, res) => {
+    try {
+        const filteredBooks = (await scrapeData()).filter(book => book.price > 50); // Ensure the scraper runs to update the bookData.json file
+        // Here you would typically filter the book data to only include books over £50
+        res.json(filteredBooks); // Sends the filtered book data back as JSON
+    } catch (error) {
+        console.error(`Error fetching book data: ${error.message}`);
+        res.status(500).json({ error: 'Failed to fetch book data' });
+    }
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
