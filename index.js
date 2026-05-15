@@ -29,8 +29,22 @@ app.get('/api/quotes', (req, res) => {
 
 // Books endpoint that uses the scraper to get book data and filter it based on price
 app.get('/api/books', async (req, res) => {
-    // Here you would typically fetch book data from a database or another source
-    try {
+    if (!req.query.price) {
+        try {
+            const bookData = await scrapeData();
+            res.json(bookData);
+            writeToFile(bookData);
+        } catch (error) {
+            console.error(`Error fetching book data: ${error.message}`);
+            res.status(500).json({ error: 'Failed to fetch book data' });
+        } return;
+    } else if (isNaN(parseFloat(req.query.price))) {
+        res.status(400).json({ error: 'Invalid price query parameter' });
+        return;
+    } else if (parseFloat(req.query.price) < 0) {
+        res.status(400).json({ error: 'Price query parameter must be a positive number' });
+        return;
+    } else try {
         // 1. Get the price limit from the query parameters and convert it to a number
         const priceLimit = parseFloat(req.query.price);
 
