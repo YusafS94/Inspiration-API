@@ -95,7 +95,7 @@ h1 {
 
 .card:hover {
   transform: translateY(-5px);
-  border-color: var(--highlight);
+  /* border-color: var(--highlight); */
 }
 
 .card-header {
@@ -126,7 +126,7 @@ code {
   font-family: "Fira Code", monospace;
   font-size: 0.85rem;
   color: #a5d6ff;
-  border-left: 1px solid var(--highlight);
+  border-left: 1px dotted var(--highlight);
 }
 code.inline {
   display: inline-block;
@@ -135,6 +135,30 @@ code.inline {
   border-radius: 4px;
   font-size: 0.85rem;
   border-left: none;
+}
+
+.try-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 8px 16px;
+  margin-top: 1rem; /* Pushes it down away from the <code> block */
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  width: 100%; /* Spans full card width for a solid, clickable CTA layout */
+  transition: all 0.2s ease;
+}
+
+.try-btn:hover {
+  background: var(--border);
+  color: #fff;
+  border-color: var(--highlight);
 }
 
 .code-preview {
