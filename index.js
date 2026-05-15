@@ -5,6 +5,8 @@ const PORT = process.env.PORT;
 const quotesData = require('./quotesData.json'); // Import the quotes data from the JSON file
 const scrapeData = require('./scraper'); // Import the scraping function
 const fs = require('fs');
+const path = require('path');
+app.use(express.static('public')); // Serve static files from the 'public' directory
 
 const writeToFile = (data) => {
     fs.writeFile('bookData.json', JSON.stringify(data, null, 2), (err) => {
@@ -15,6 +17,10 @@ const writeToFile = (data) => {
         }
     });
 };
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html')); // Serve the index.html file
+});
 
 // This is your ENDPOINT
 app.get('/api/quotes', (req, res) => {
